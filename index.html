@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mesto</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> 
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="header__logo">
+				<img src="./img/logo.svg" alt="Mesto Russia" class="logo">
+			</div>
+			<div class="header__line">
+				<img src="./img/line.svg" alt="Line" class="line">
+			</div>
+		</div>
+	</header>
+
+	<section id="profile" class="profile">
+		<div class="container">
+			<div class="wrapper">
+				<div class="info">
+					<div class="profile__avatar">
+						<img src="./img/man.jpg" alt="Man">
+					</div>
+					<div class="profile__info">
+						<h1 class="profile__name">Жак-Ив Кусто</h1>
+						<p class="profile__work">Исследователь океана</p>
+					</div>
+					<div class="profile__button-edit">
+						<img src="./img/edit_button.svg" id="open__popup-edit" alt="Edit Button">
+					</div>
+				</div>
+				<div class="profile__button-add">
+					<img src="./img/add_button.svg" id="open__popup-add" alt="Add Button">
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<section id="gallery" class="gallery">
+		<div class="container">
+			<ul class="gallery__column"></ul>
+		</div>
+	</section>
+
+
+
+
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer-text">
+				<p>
+					© 2020 Mesto Russia
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- ГОТОВЫЙ -->
+	<div id="popup__edit" class="popup__edit">
+		<form class="popup__form-edit">
+			<button class="popup__close-edit" type="button"></button>
+			<h2 class="popup__title">
+				Редактировать профиль
+			</h2>
+			<fieldset class="popup__set">
+				<input type="text" placeholder="Имя" class="popup__input-edit" id="popup__input-edit" name="name" minlength="2" maxlength="40" required>
+				<input type="text" placeholder="О себе" class="popup__input-edit" id="popup__input-edit" name="name" minlength="2" maxlength="200" required>
+			</fieldset>
+			<button type="submit" class="popup__submit-edit">Сохранить</button>
+		</form>
+	</div> 
+
+	<div id="popup__add" class="popup__add">
+		<form class="popup__form-add">
+			<button class="popup__close-add" type="button"></button>
+			<h2 class="popup__title">
+				Новое место
+			</h2>
+			<fieldset class="popup__set">
+				<input type="text" placeholder="Название" class="popup__input-add" name="name" minlength="2" maxlength="40" required>
+				<input type="text" placeholder="Ссылка на картинку" class="popup__input-add" name="name" minlength="2" maxlength="200" required>
+			</fieldset>
+			<button type="submit" class="popup__submit-add">Создать</button>
+		</form>
+	</div>
+
+	<template id="place__template">
+		<li class="gallery__element">
+			<img class="gallery__link" src="#" alt="#">
+			<div class="gallery__element-title">
+				<h2 class="gallery__title">
+					
+				</h2>
+				<div class="gallery__button">
+					<button type="button" class="like"></button>
+					<span class="likes__number">0</span>
+				</div>
+				<button type="button" class="button__delete"></button>
+			</div>
+		</li>
+		<!-- Добавить кнопку удаления -->
+	</template>
+
+
+
+	<script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Inter', 'Arial', sans-serif;
+	background: black;
+	color: white;
+	font-size: 18px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: 0;
+	font-size: 42px;
+	font-weight: 500;
+	line-height: 48px;
+}
+
+h2 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 29px;
+}
+
+.container {
+	width: 880px;
+	margin: 0 auto; 
+}
+
+.header {
+	margin-top: 45px;
+}
+
+.line {
+	margin-top: 41px;
+}
+
+.profile {
+	margin-top: 40px;
+}
+
+.wrapper {
+	display: flex;
+}
+
+.info {
+	display: flex;
+    width: 720px;
+}
+
+.profile__avatar {
+	margin-right: 30px;
+}
+
+.profile__avatar img {
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+}
+
+.profile__info {
+	margin-right: 18px;
+}
+
+.profile__button-edit {
+	margin-top: 15px;
+	margin-right: 244px;
+}
+
+.profile__button-edit img {
+	cursor: pointer;
+}
+
+.profile__button-add img {
+	cursor: pointer;
+}
+
+.gallery {
+	margin-top: 50px;
+}
+
+.gallery img {
+	width: 282px;
+    height: 282px;
+    border-radius: 5px 5px 0 0;
+    background: white;
+} 
+
+.gallery__column {
+	display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	column-gap: 15px;
+    row-gap: 15px;
+}
+
+.gallery__element {
+	width: 282px;
+    height: 361px;
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.gallery__element-title {
+	display: flex;
+    padding-top: 20px;
+    padding-left: 21px;
+    padding-right: 15px;
+    justify-content: space-between;
+	align-items: center;
+}
+
+.gallery__button {
+	text-align: center;
+}
+
+.like {
+	background: transparent url(../img/like.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: none;
+	cursor: pointer;
+	display: block;
+	height: 19px;
+	transition: .3s ease;
+	width: 22px;
+}
+
+.like__active {
+	background: transparent url(../img/like-added.svg);
+}
+
+.like img {
+	width: 22px;
+	height: 19px;
+}
+
+.button__delete {
+	background: transparent url(../img/delete-card.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    height: 19px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: .3s ease;
+    width: 18px;
+}
+
+.footer {
+	margin-top: 67px;
+    margin-bottom: 60px;
+	color: #545454;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.popup__edit, .popup__add {
+	position: fixed;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 1s linear, opacity 1s linear; 
+}
+
+.popup__open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup__form-edit, .popup__form-add {
+	position: relative;
+	width: 100%;
+	max-width: 430px;
+	background-color: #fff;
+	color: #000;
+	display: flex;
+    flex-direction: column;
+	border-radius: 10px;
+	padding: 34px 36px 37px;
+    box-shadow: 0 0 25px rgb(0 0 0 / 15%);
+    box-sizing: border-box;
+}
+
+.popup__title {
+	margin-bottom: 54px;
+	font-size: 24px;
+}
+
+.popup__set {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 0 48px;
+    padding: 0;
+}
+
+.popup__input-edit, .popup__input-add {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    font-size: 14px;
+    padding-bottom: 13px;
+    position: relative;
+    width: 100%;
+}
+
+.popup__close-edit, .popup__close-add {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	background: transparent;
+	background-image: url(../img/close_logo.png);
+	border: none;
+	top: -35px;
+    right: -40px;
+    background-position: center;
+    background-size: cover;
+	cursor: pointer;
+}
+
+.popup__submit-edit, .popup__submit-add {
+	width: 358px;
+    height: 50px;
+	align-content: center;
+	background-color: #000;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 880px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		width: 880px;
+	}
+	
+}
+
+@media screen and (max-width: 991px) {
+	.container {
+		width: 720px;
+	}
+	
+	
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		width: 540px;
+	}
+	
+}
+
+@media screen and (max-width: 575px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+
+	
+}
